@@ -68,6 +68,7 @@ To improve segmentation performance, we implemented a multi-level ensemble appro
 ### Evaluation
 
 The primary evaluation metric is the **Aggregated Dice Similarity Coefficient (DSCagg)**. We report results for each configuration and use per-sample Dice scores to assess model robustness. 
+
 [//]: < The evaluation code is available in `src/evaluation.py`.>
 
 ## Results
