@@ -78,7 +78,7 @@ The primary evaluation metric is the **Aggregated Dice Similarity Coefficient (D
 ### Visual Comparisons
 --coming soon--
 
-[//]: < <sup>Fig 1. Comparison of predictions between nnUNet, MedNeXt, and ground truth.</sup> >
+[//]: < Fig 1. Comparison of predictions between nnUNet, MedNeXt, and ground truth. >
 
 [//]: < Additional figures can be found in the `results/` folder.>
 
