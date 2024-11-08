@@ -26,13 +26,76 @@ The project utilizes the **HNTS-MRG24 dataset** provided by the challenge organi
 
 > **Note**: Dataset access requires registration at [HNTS-MRG24 Challenge](https://hntsmrg24.grand-challenge.org).
 
-## Installation
+[//]: <> ## Installation
 
-To set up the environment and install dependencies:
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/HNTS-MRG24-Segmentation
-cd HNTS-MRG24-Segmentation
+[//]: <> To set up the environment and install dependencies:
+[//]: <> ```bash
+[//]: <> # Clone the repository
+[//]: <> git clone https://github.com/yourusername/HNTS-MRG24-Segmentation
+[//]: <> cd HNTS-MRG24-Segmentation
 
-# Install dependencies
-pip install -r requirements.txt
+[//]: <> # Install dependencies
+[//]: <> pip install -r requirements.txt
+
+This project requires a GPU for model training. Recommended specifications:
+
+- **6 NVIDIA RTX 6000 GPUs**
+- **48 GB VRAM**
+- **1024 GB RAM**
+
+## Workflow
+
+### Data Preparation
+--coming soon--
+### Model Training
+
+We utilized **nnUNet** and **MedNeXt** models with the following configurations:
+
+- **Task 1**: Pre-trained on mid-RT and registered pre-RT images, fine-tuned on original pre-RT images.
+- **Task 2**: Multi-channel input with mid-RT images, registered pre-RT images, and registered pre-RT segmentation masks.
+
+[//]: <> Scripts for training models are in `src/model_training/`. Model configurations and parameters are included in each script for reproducibility.
+
+### Ensemble Strategy
+
+To improve segmentation performance, we implemented a multi-level ensemble approach:
+
+1. **nnUNet Ensembles**: Predictions from FullRes, Cascade, and ResEnc configurations were combined using `nnUNetv2_ensemble`.
+3. **Average Ensemble**: Combined predictions from nnUNet and MedNeXt for the final segmentation.
+
+[//]: <> The ensemble process is described in `src/ensemble.py`.
+
+### Evaluation
+
+The primary evaluation metric is the **Aggregated Dice Similarity Coefficient (DSCagg)**. We report results for each configuration and use per-sample Dice scores to assess model robustness. 
+[//]: <> The evaluation code is available in `src/evaluation.py`.
+
+## Results
+
+### Quantitative Results
+--coming soon--
+
+### Visual Comparisons
+--coming soon--
+
+[//]: <> <sup>Fig 1. Comparison of predictions between nnUNet, MedNeXt, and ground truth.</sup>
+
+[//]: <> Additional figures can be found in the `results/` folder.
+
+## References
+
+For more details, please refer to our paper:
+
+- **Title**: _Automatic Segmentation Frameworks for Head & Neck Tumors Using MRI Scans_
+- **Authors**: Nikoo Moradi et al.
+
+We acknowledge the support of the **Plattform für KI-Translation Essen (KITE)** and **NUM 2.0** for their contributions.
+
+## Contact
+
+For questions or support, please contact:
+
+- **Nikoo Moradi** (Email: [nikoomoradi81@gmail.com](mailto:nikoomoradi81@gmail.com))
+
+Feel free to contribute or open issues if you find any bugs or have suggestions!
+
