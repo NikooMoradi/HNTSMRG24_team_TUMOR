@@ -1,4 +1,4 @@
-# Automatic Segmentation of Head & Neck Tumors for MRI-Guided Adaptive Radiotherapy
+# Comparative Analysis of nnUNet and MedNeXt for Head and Neck Tumor Segmentation in MRI-guided Radiotherapy
 
 Welcome to the repository for our solution to the **HNTS-MRG24 MICCAI Challenge**, where we achieved first place in Task 1 (pre-radiotherapy segmentation) using advanced deep learning methods for automatic segmentation of primary gross tumor volume (GTVp) and metastatic node gross tumor volume (GTVn) in MRI scans. This repository provides a step-by-step guide to reproduce our results, including model training, ensembling, evaluation, and visualization.
 
