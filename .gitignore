@@ -1,0 +1,30 @@
+# large data / artifacts
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+
+# medical imaging & arrays (keep out of Git; use storage/LFS if needed)
+# *.mha
+# *.mhd
+# *.nii
+# *.nii.gz
+# *.nrrd
+# *.npz
+# *.npy
+
+# torch/tensorflow logs
+runs/
+wandb/
+
+# nnUNet artifacts
+**/nnUNet_results/
+**/results/
+**/inference/
+
+# misc
+.DS_Store
+__pycache__/
+*.pyc
