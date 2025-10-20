@@ -1,0 +1,20 @@
+{
+    "name": "Dataset505_concatenated",
+    "description": "HNTSMG24 MICCAI challenge dataset",
+    "tensorImageSize": "4D",
+    "reference": "https://hntsmrg24.grand-challenge.org/dataset/",
+    "licence": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "release": "1.0 06/14/2024",
+    "channel_names": {
+        "0": "preRTreg",
+        "1": "preRTreg segmentation",
+        "2": "midRT"
+    },
+    "labels": {
+        "background": "0",
+        "GTVp label": "1",
+        "GTVn label": "2"
+    },
+    "numTraining": 150,
+    "file_ending": ".nii.gz"
+}
