@@ -29,8 +29,8 @@ import time
 INPUT_PATH = Path("/input")  # For Docker
 OUTPUT_PATH = Path("/output")  #
 
-MODEL_INPUT_PATH = OUTPUT_PATH / "model_input"  # Now relative
-MEDNEXT_OUTPUT_PATH = OUTPUT_PATH / "mednext_output"  # Now relative
+MODEL_INPUT_PATH = OUTPUT_PATH / "model_input"  
+MEDNEXT_OUTPUT_PATH = OUTPUT_PATH / "mednext_output"  
 
 
 def run():
